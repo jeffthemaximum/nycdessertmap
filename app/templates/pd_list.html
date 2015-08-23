@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}Flasky{% endblock %}
+
+{% block page_content %}
+<div class="page-header">
+    <h1>Hello, {% if current_user.is_authenticated() %}{{ current_user.username }}{% else %}Stranger{% endif %}!</h1>
+    <h3>Here's a list of all the PD's we've done this year at IAL.</h3>
+    <h3>Click a link to go bakc and relive some of your favorites!</h3>
+</div>
+{% endblock %}
