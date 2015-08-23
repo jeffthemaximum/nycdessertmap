@@ -4,8 +4,26 @@
 
 {% block page_content %}
 <div class="page-header">
-    <h1>Hello, {% if current_user.is_authenticated() %}{{ current_user.username }}{% else %}Stranger{% endif %}!</h1>
-    <h3>Here's a list of all the PD's we've done this year at IAL.</h3>
-    <h3>Click a link to go bakc and relive some of your favorites!</h3>
+    <h1>Hello, {% if current_user.is_authenticated() %}{{ current_user.first_name }}{% else %}Stranger{% endif %}!</h1>
+    <h3>Here's a list of all the amazing things I've taught you.</h3>
+    <h3>Click a link to go back and relive some of your favorites!</h3>
 </div>
+<table class="table table-striped table-hover ">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Date</th>
+      <th>Subject</th>
+      <th>Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>August 27, 2015</td>
+      <td>Gmail, google forms, class website, beginning of the year info.</td>
+      <td><a href="{{ url_for('main.pd_one') }}">Click here!</a></td>
+    </tr>
+  </tbody>
+</table> 
 {% endblock %}
