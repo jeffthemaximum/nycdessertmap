@@ -1227,8 +1227,8 @@ h2,
 .h2,
 h3,
 .h3 {
-  margin-top: 21px;
-  margin-bottom: 10.5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 h1 small,
 .h1 small,
@@ -1413,8 +1413,8 @@ a.bg-danger:focus {
   background-color: #d62c1a;
 }
 .page-header {
-  padding-bottom: 9.5px;
-  margin: 42px 0 21px;
+  padding-bottom: 5px;
+  margin: 5px 0 5px;
   border-bottom: 1px solid transparent;
   text-align: center;
 }
@@ -7067,8 +7067,8 @@ a.list-group-item-danger.active:focus {
 
 div#get_started {
   text-align: center;
-  margin-bottom: 50px;
-  margin-top: 50px;
+/*  margin-bottom: 50px;
+  margin-top: 50px;*/
 }
 
 div#gif {

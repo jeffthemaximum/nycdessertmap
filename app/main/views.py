@@ -5,10 +5,10 @@ from . import main
 
 @main.route('/')
 def index():
-    if current_user.is_authenticated():
-        return render_template('pd_content/2015_8_27_first_day_google.html')
-    else:
-        return render_template('index.html')
+    return render_template('index.html')
+    # if current_user.is_authenticated():
+    #     return render_template('pd_content/2015_8_27_first_day_google.html')
+    # else:
 
 # @main.route('/pd_list/2015_8_27_first_day_google')
 # @login_required
