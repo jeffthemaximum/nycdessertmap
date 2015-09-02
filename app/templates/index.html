@@ -10,6 +10,25 @@
 <div class="container" id="get_started">
     <p>Jeff and Emily are aan adorable pair of married New Yorker's who go around NYC, eat the city's best desserts, and then plot them on this map so that you can also enjoy some awesome desserts!</p>
 </div>
-<div class="container" id="gif">
-</div>
+
+<!-- load map -->
+<body>
+    <div id="map"></div>
+
+    <!-- from https://developers.google.com/maps/documentation/javascript/tutorial -->
+    <script type="text/javascript">
+
+    var map;
+    function initMap() {
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: -34.397, lng: 150.644},
+        zoom: 8
+      });
+    }
+
+    </script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzn_jmwfkOfkbvKoUeSDb3YDObuY5EKC0&callback=initMap">
+    </script>
+</body>
 {% endblock %}

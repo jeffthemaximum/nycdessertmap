@@ -7076,3 +7076,16 @@ div#gif {
   margin-bottom: 100px;
   margin-top: 50px;
 }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#map {
+  height: 80%;
+  width:80%;
+  margin-left: auto;
+  margin-right: auto;
+}
