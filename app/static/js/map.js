@@ -17,7 +17,7 @@ var noPoi = [
 
 var magnoliaUWSLatLong  = {lat: 40.775764, lng: -73.9802664}
 
-var contentString = '<div id="content">'+
+var magnoliaContentString = '<div id="content">'+
   '<div id="siteNotice">'+
   '</div>'+
   '<h1 id="firstHeading" class="firstHeading">Magnolia Upper West Side</h1>'+
@@ -35,6 +35,21 @@ var contentString = '<div id="content">'+
   '</div>'+
   '</div>';
 
+function DessertSpot(latlong, descr, map) {
+        this.latlong = latlong;
+        this.descr  = descr;
+        this.marker = new google.maps.Marker({
+            position: magnoliaUWSLatLong,
+            map: map,
+            title: 'Magnolia UWS!'
+        });
+        this.infoWin = new google.maps.InfoWindow({content: this.descr});
+
+        var self = this;
+        this.marker.addListener('click', function() {
+            self.infoWin.open(map, self.marker);
+        });
+};
 
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
@@ -43,19 +58,7 @@ function initMap() {
   });
   map.setOptions({styles: noPoi});
 
-    var magnoliaUWS = new google.maps.Marker({
-        position: magnoliaUWSLatLong,
-        map: map,
-        title: 'Magnolia UWS!'
-    });
-
-    magnoliaUWS.addListener('click', function() {
-        infowindow.open(map, magnoliaUWS);
-    });
-
-    var infowindow = new google.maps.InfoWindow({
-        content: contentString
-    });
+    var magnoliaUWS = new DessertSpot(magnoliaUWSLatLong, magnoliaContentString, map);
 }
 
 

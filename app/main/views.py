@@ -1,5 +1,5 @@
 from flask import render_template
-from flask.ext.login import current_user
+# from flask.ext.login import current_user
 from . import main
 
 
@@ -10,6 +10,10 @@ def index():
     #     return render_template('pd_content/2015_8_27_first_day_google.html')
     # else:
 
+
+@main.route('/magnoliaUWS')
+def magnoliauws():
+    return render_template('magnoliaUWS.html')
 # @main.route('/pd_list/2015_8_27_first_day_google')
 # @login_required
 # def pd_one():
