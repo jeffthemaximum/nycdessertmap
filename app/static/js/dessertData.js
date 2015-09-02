@@ -21,7 +21,7 @@ var dessertData = [
               '</div>'
     },
     {
-        name: "Cafe Lalo",
+        name: "CafeLalo",
         latLong: {lat: 40.7859971, lng: -73.9767225},
         descr: '<div id="content">'+
               '<div id="siteNotice">'+
@@ -35,7 +35,7 @@ var dessertData = [
               'Emily\'s favorite dish here is the Maple Pecan Pie, and Jeff\'s '+
               'is the Cappuccino Mouse Cake. They recommend going in the evening '+
               'so that you can enjoy the unique lighting here.</p>'+
-              '<p>Learn more here: <a href="">'+
+              '<p>Learn more here: <a href="/CafeLalo">'+
               'More detailed writeup about Cafe Lalo</a> '+
               '(last visited by Jeff and Emily on June 25, 2015).</p>'+
               '</div>'+

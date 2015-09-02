@@ -14,7 +14,8 @@ def index():
 @main.route('/magnoliaUWS')
 def magnoliauws():
     return render_template('magnoliaUWS.html')
-# @main.route('/pd_list/2015_8_27_first_day_google')
-# @login_required
-# def pd_one():
-#     return render_template('pd_content/2015_8_27_first_day_google.html')
+
+
+@main.route('/CafeLalo')
+def cafelalo():
+    return render_template('CafeLalo.html')
