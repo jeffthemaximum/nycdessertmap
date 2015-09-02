@@ -1,18 +1,15 @@
 {% extends "base.html" %}
 
-{% block title %}Flasky{% endblock %}
+{% block title %}NycDessertMap{% endblock %}
 
 {% block page_content %}
 <div class="page-header">
     <h1>Hello, {% if current_user.is_authenticated() %}{{ current_user.first_name }}{% else %}Stranger{% endif %}!</h1>
-    <h1>Welcome to the best Teacher PD website on the internet!</h1>
+    <h1>Welcome to Jeff and Emily's map of NYC's best dessert spots!</h1>
 </div>
 <div class="container" id="get_started">
-    <a href="{{ url_for('auth.register') }}" class="btn btn-primary btn-lg">Register and Get Started!</a>
-    <p>Already registered? <a href="{{ url_for('auth.login') }}">Login</a></p>
+    <h4>Jeff and Emily are aan adorable pair of married New Yorker's who go around NYC, eat the city's best desserts, and then plot them on this map so that you can also enjoy some awesome desserts!</h4>
 </div>
 <div class="container" id="gif">
-    <img src="{{ url_for('static', filename='img/mirro_obama.gif') }}">
-    <p>*I like random gifs that make me laugh, and they'll be many scattered around my PD website</p>
 </div>
 {% endblock %}
