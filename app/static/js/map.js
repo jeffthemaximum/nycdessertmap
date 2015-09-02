@@ -15,50 +15,63 @@ var noPoi = [
   }
 ];
 
-var magnoliaUWSLatLong  = {lat: 40.775764, lng: -73.9802664}
-
-var magnoliaContentString = '<div id="content">'+
-  '<div id="siteNotice">'+
-  '</div>'+
-  '<h1 id="firstHeading" class="firstHeading">Magnolia Upper West Side</h1>'+
-  '<div id="bodyContent">'+
-  '<p><b>Magnolia Upper West Side</b>, best known for it\'s cupcakes, ' +
-  'is one of Jeff and Emily\'s go-to desset spots in NYC. '+
-  'When Jeff and Emily go here, they recommend getting a '+
-  'vanilla cupcake with pink vanilla butter cream. '+
-  'They\'re also crazy about Magnolia\'s banana pudding. '+
-  'The pudding is a secret speciality at Magnolia, as most people '+
-  'only know about the cupcakes.</p>'+
-  '<p>Learn more here: <a href="">'+
-  'More detailed writeup about Magnolia UWS</a> '+
-  '(last visited by Jeff and Emily on August 13, 2015).</p>'+
-  '</div>'+
-  '</div>';
-
-function DessertSpot(latlong, descr, map) {
-        this.latlong = latlong;
+function DessertSpot(latlong, descr, map, name) {
+        this.name = name;
+        this.latLong = latlong;
         this.descr  = descr;
         this.marker = new google.maps.Marker({
-            position: magnoliaUWSLatLong,
+            position: latlong,
             map: map,
-            title: 'Magnolia UWS!'
+            title: name
         });
-        this.infoWin = new google.maps.InfoWindow({content: this.descr});
 
-        var self = this;
-        this.marker.addListener('click', function() {
-            self.infoWin.open(map, self.marker);
-        });
+        //store dict of all dessert spots
+        DessertSpot.hashTable[name] = this;
 };
 
-function initMap() {
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 40.754, lng: -73.984},
-    zoom: 12
-  });
-  map.setOptions({styles: noPoi});
+DessertSpot.hashTable = {};
 
-    var magnoliaUWS = new DessertSpot(magnoliaUWSLatLong, magnoliaContentString, map);
+function findRelevantRestaurant() {
+    var str = window.location.href;
+    var n = str.lastIndexOf('/');
+    var result = str.substring(n + 1);
+    if (result == '') {
+        return dessertData;
+    } else {
+        for (var i = 0; i < dessertData.length; i++) {
+            if (dessertData[i].name == result) {
+                return [dessertData[i]];
+            }
+        }
+    }
 }
 
+function initMap() {
+    map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: 40.754, lng: -73.984},
+        zoom: 12
+    });
+    map.setOptions({styles: noPoi});
 
+    var foo = findRelevantRestaurant();
+
+    //iterate over all restaurants in
+    foo.forEach(function(item) {
+        //create new marker for restaurant
+        newSpot = new DessertSpot(item.latLong, item.descr, map, item.name)
+        //create new info window for restaurant
+        newSpot.infoWin = new google.maps.InfoWindow({content: item.descr});
+        //add click listener for marker
+        google.maps.event.addListener(newSpot.marker, 'click', function() {
+            //if any info window are open, close them when new window is clicked
+            if (newSpot.infoWin) {
+                newSpot.infoWin.close();
+            }
+            //set content of info window
+            newSpot.infoWin.setContent(item.descr);
+            //open new info window
+            newSpot.infoWin.open(map, this);
+        });
+    })
+
+}
