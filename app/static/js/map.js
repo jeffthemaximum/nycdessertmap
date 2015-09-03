@@ -55,8 +55,12 @@ function initMap() {
 
     var foo = findRelevantRestaurant();
 
+    //set counter to count markers
+    var markerCount = 0;
     //iterate over all restaurants in
     foo.forEach(function(item) {
+        //increment counter
+        markerCount++;
         //create new marker for restaurant
         newSpot = new DessertSpot(item.latLong, item.descr, map, item.name)
         //create new info window for restaurant
@@ -73,5 +77,21 @@ function initMap() {
             newSpot.infoWin.open(map, this);
         });
     })
-
+    // if only one counter on page, center map on that marker
+    if (markerCount == 1) {
+        map.setCenter(newSpot.marker.getPosition());
+    }
 }
+
+
+$(document).ready(function(){
+  $('.bxslider').bxSlider({
+    //minSlides: 1,
+    //maxSlides: 5,
+    slideWidth: 350,
+    //mode: 'vertical',
+    //slideMargin: 5
+    adaptiveHeight: true
+  });
+});
+
