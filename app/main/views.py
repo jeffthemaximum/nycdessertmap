@@ -19,3 +19,8 @@ def magnoliauws():
 @main.route('/CafeLalo')
 def cafelalo():
     return render_template('CafeLalo.html')
+
+
+@main.route('/BillysBakery')
+def billysbakery():
+    return render_template('BillysBakery.html')
