@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/x-icon">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/flatly-small-map.css') }}">
+    <!-- jQuery library (served from Google) -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <!-- bxSlider Javascript file -->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.bxslider.js') }}"></script>
+    <!-- bxSlider CSS file -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/jquery.bxslider.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/dessertData.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/map.js') }}"></script>
+  </head>
+  <body>
+
+  <div class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{{ url_for('main.index') }}">NycDessertMap</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="{{ url_for('main.index') }}">Home</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+    </div>
+  </div>
+
+
+
+        <div class="page-header">
+          <h2>Jacques Torres</h2>
+        </div>
+        <table>
+            <td>
+              <div class="container" id="detailed-restaurant-description">
+                <p>World-famous chocolate, gelato and cookies.</a>.</p>
+                <p><b>What to get: </b>Mocha gelato sandwich and an assortment of chocolates.</p>
+                <p><b>Restaurant Link: </b><a href="http://www.mrchocolate.com/news/about/locations/lafayette/" target="_blank">Jacques Torres Website</a></p>
+                <p><b>Menu Link: </b><a href="http://www.mrchocolate.com/most-popular.html" target="_blank">Jacques Torres Menu</a></p>
+                <p><b>More details: </b>Jeff came here with some of his friends Steven, Noella, Aagjie, Lais, and Panya from <a href="https://www.recurse.com/" target="_blank">Recurse Center</a>. We were overwhelmed in the best way possible by all the deliciousness here. Jacques Torres is best known for his spectacular chocolate. He's got some perfect chocolates here, with selections such as Dark chocolate Mint Tea, and Chocolate Peanut Brittle. They're perfect for building a box of 12 to take with you. Jeff got a box of some awesone ones for Emily, and they pounded most of them in a couple days. The gelato is spectular, among some of the best you'll get anywhere in the world. When you come to this location, you have to get the mocha gelato sandwich. It's two gigantic chocolate cookies surrounding Jacques Torres' mocha gelato. Gelato is like super fancy ice cream, and I don't really know what makes it different than ice cream, but it tastes fancy and italian. This is a required NYC stop, without a doubt. Chocolate, gelato, cookies, and a world-famous chef make this place one of the best dessert spots in the city.</p>
+                <p>
+              </div>
+            </td>
+            <td>
+                <ul class="bxslider">
+                    <li><img src="{{ url_for('static', filename='img/JacquesTorres/1.jpg') }}"></li>
+                    <li><img src="{{ url_for('static', filename='img/JacquesTorres/2.jpg') }}"></li>
+                    <li><img src="{{ url_for('static', filename='img/JacquesTorres/3.jpg') }}"></li>
+                    <li><img src="{{ url_for('static', filename='img/JacquesTorres/4.jpg') }}"></li>
+                    <li><img src="{{ url_for('static', filename='img/JacquesTorres/5.jpg') }}"></li>
+                </ul>
+            </td>
+        </table>
+
+
+        <div id="map"></div>
+
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzn_jmwfkOfkbvKoUeSDb3YDObuY5EKC0&callback=initMap">
+    </script>
+
+  </body>
+</html>

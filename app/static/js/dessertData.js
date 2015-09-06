@@ -41,7 +41,7 @@ var dessertData = [
               '</div>'+
               '</div>'
     },
-        {
+    {
         name: "BillysBakery",
         latLong: {lat: 40.7453093, lng: -74.0018869},
         descr: '<div id="content">'+
@@ -58,6 +58,26 @@ var dessertData = [
               '<p>Learn more here: <a href="/BillysBakery">'+
               'More detailed writeup about Billy\'s Bakery</a> '+
               '(last visited by Jeff and Emily on September 5, 2015).</p>'+
+              '</div>'+
+              '</div>'
+    },
+    {
+        name: "JacquesTorres",
+        latLong: {lat: 40.7254036, lng: -73.9948736},
+        descr: '<div id="content">'+
+              '<div id="siteNotice">'+
+              '</div>'+
+              '<h1 id="firstHeading" class="firstHeading">Jacques Torres</h1>'+
+              '<div id="bodyContent">'+
+              '<p><b>Jacques Torres</b> is a world-famous dealer of chocolate\'s, gelato, and cookies. '+
+              'We call it a \'dealer\', because Jacques Torres really is addicting and expensive, '+
+              'just like a drug dealer. It\'s a must-do NYC experience to visit this guilty pleasure. '+
+              'So far, only Jeff has been here, and he visited with friends. '+
+              'Aagjie, Panya, Lais, Steven, and Noella from <a href="https://www.recurse.com">Recurse Center</a>. '+
+              'Jeff enjoyed a mocha gelato cone and got some delicious boxed chocolates for Emily here.'+
+              '<p>Learn more here: <a href="/JacquesTorres">'+
+              'More detailed writeup about Jacques Torres</a> '+
+              '(last visited by Jeff on September 1, 2015).</p>'+
               '</div>'+
               '</div>'
     }

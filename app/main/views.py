@@ -24,3 +24,8 @@ def cafelalo():
 @main.route('/BillysBakery')
 def billysbakery():
     return render_template('BillysBakery.html')
+
+
+@main.route('/JacquesTorres')
+def jacquestorres():
+    return render_template('JacquesTorres.html')
