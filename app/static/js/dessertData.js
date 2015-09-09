@@ -80,6 +80,26 @@ var dessertData = [
               '(last visited by Jeff on September 1, 2015).</p>'+
               '</div>'+
               '</div>'
+    },
+    {
+      name: "SprinklesUES",
+      latLong: {lat: 40.7632696, lng: -73.9676367},
+      descr: '<div id="content">'+
+              '<div id="siteNotice">'+
+              '</div>'+
+              '<h1 id="firstHeading" class="firstHeading">Sprinkles Cupcakes</h1>'+
+              '<div id="bodyContent">'+
+              '<p><b>Sprinkles Cupcakes</b> Upper East Side location is arguably the best cupcake spot in the city. '+
+              'The Beverly Hills based Sprinkles Cupcakes has both expected flavors like Red Velvet and unique ones, '+
+              'like Cuban coffee, banana dark chocolate, and cinnamon sugar. '+
+              'Jeff and Emily rarely visit the Upper East side of Manhattan, but when they do, they usually '+
+              'go to Sprinkles. Sprinkles has a menu that changes daily, but Jeff recommends the classic sprinkle cupcake, '+
+              'and Emily loves the banana dark chocolate.'+
+              '<p>Learn more here: <a href="/SprinklesUES">'+
+              'More detailed writeup about Sprinkles Cupcakes</a> '+
+              '(last visited by Jeff on November 15, 2014).</p>'+
+              '</div>'+
+              '</div>'
     }
 ]
 

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/x-icon">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/flatly-small-map.css') }}">
+    <!-- jQuery library (served from Google) -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <!-- bxSlider Javascript file -->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.bxslider.js') }}"></script>
+    <!-- bxSlider CSS file -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/jquery.bxslider.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/dessertData.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/map.js') }}"></script>
+  </head>
+  <body>
+
+  <div class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{{ url_for('main.index') }}">NycDessertMap</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="{{ url_for('main.index') }}">Home</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+    </div>
+  </div>
+
+
+
+        <div class="page-header">
+          <h2>Sprinkles Cupcakes</h2>
+        </div>
+        <table>
+            <td>
+              <div class="container" id="detailed-restaurant-description">
+                <p>Simply perfect cupcakes.</p>
+                <p><b>What to get: </b>Banana dark chocolate cupcake and classic sprinkle cupcake.</p>
+                <p><b>Restaurant Link: </b><a href="http://www.sprinkles.com/" target="_blank">Sprinkles Website</a></p>
+                <p><b>Menu Link: </b><a href="http://www.sprinkles.com/cupcakes/flavors/menu" target="_blank">Sprinkles Menu</a></p>
+                <p><b>More details: </b>This is arguably one of the best cupcake places anywhere, and definitely among the best in NYC. Sprinkles has a rotating menu of cupcakes, so you should definitely checkout their <a href="http://www.sprinkles.com/cupcakes/flavors/menu" target="_blank">calendar</a> to see what they'll have when you get there. Sprinkles has locations all over the country, and is based out of Hollywood. They've been on <a href="http://www.sprinkles.com/cupcakes/i-love-sprinkles/candace-nelson-cupcake-wars" target="_blank">Food Network</a>'s Cupcake Wars. Our favorite flavors are banana dark chocolate and classic sprinkle. However, there's some awesome one's we've been lucky to have on occasion. Chai Latte is as fun as it sounds, lemon is puckery and sweet, pumpkin is a seasonal treat, and peanut butter chip is decadant and delicious. Sprinkles has made a <a href="http://nypost.com/2014/03/25/atm-sells-cupcakes-on-street-in-nyc/" target="_blank">bunch of news</a> for their cupcake ATM, which is exactly what it sound like, a cupcake atm. This is in our list of top 5 places for dessert in the city, so if you're doing a dessert tour of NYC, ya gots to go here. There's also a NYC location in the Financial District, so hopefully you're never too far from a Sprinkles Cupcakes location!</p>
+                <p>
+              </div>
+            </td>
+            <td>
+                <ul class="bxslider">
+                    <li><img src="{{ url_for('static', filename='img/SprinklesUES/1.jpg') }}"></li>
+                    <li><img src="{{ url_for('static', filename='img/SprinklesUES/2.jpg') }}"></li>
+                    <li><img src="{{ url_for('static', filename='img/SprinklesUES/3.jpg') }}"></li>
+                    <li><img src="{{ url_for('static', filename='img/SprinklesUES/4.jpg') }}"></li>
+                    <li><img src="{{ url_for('static', filename='img/SprinklesUES/5.jpg') }}"></li>
+                </ul>
+            </td>
+        </table>
+
+
+        <div id="map"></div>
+
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzn_jmwfkOfkbvKoUeSDb3YDObuY5EKC0&callback=initMap">
+    </script>
+    <!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=10606011; 
+var sc_invisible=1; 
+var sc_security="067aebd7"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="website
+statistics" href="http://statcounter.com/"
+target="_blank"><img class="statcounter"
+src="http://c.statcounter.com/10606011/0/067aebd7/1/"
+alt="website statistics"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+  </body>
+</html>

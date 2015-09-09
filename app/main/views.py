@@ -29,3 +29,8 @@ def billysbakery():
 @main.route('/JacquesTorres')
 def jacquestorres():
     return render_template('JacquesTorres.html')
+
+
+@main.route('/SprinklesUES')
+def sprinklesues():
+    return render_template('SprinklesUES.html')
