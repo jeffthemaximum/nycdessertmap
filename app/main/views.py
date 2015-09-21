@@ -34,3 +34,28 @@ def jacquestorres():
 @main.route('/SprinklesUES')
 def sprinklesues():
     return render_template('SprinklesUES.html')
+
+
+@main.route('/SweetLifePastry')
+def sweetlifepastry():
+    return render_template('SweetLifePastry.html')
+
+
+@main.route('/MakeMyCake')
+def makemycake():
+    return render_template('MakeMyCake.html')
+
+
+@main.route('/TheHungarianPastryShop')
+def thehungarianpastryshop():
+    return render_template('TheHungarianPastryShop.html')
+
+
+@main.route('/Levain')
+def levain():
+    return render_template('Levain.html')
+
+
+@main.route('/Schmackarys')
+def schmackarys():
+    return render_template('schmackarys.html')

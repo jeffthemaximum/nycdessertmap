@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/x-icon">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/flatly-small-map.css') }}">
+    <!-- jQuery library (served from Google) -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <!-- bxSlider Javascript file -->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.bxslider.js') }}"></script>
+    <!-- bxSlider CSS file -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/jquery.bxslider.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/dessertData.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/map.js') }}"></script>
+  </head>
+  <body>
+
+  <div class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{{ url_for('main.index') }}">NycDessertMap</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="{{ url_for('main.index') }}">Home</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+    </div>
+  </div>
+
+
+
+        <div class="page-header">
+          <h2>The Hungarian Pastry Shop</h2>
+        </div>
+        <table>
+            <td>
+              <div class="container" id="detailed-restaurant-description">
+                <p>Authentic and unique food, drink, and atmosphere.</p>
+                <p><b>What to get: </b>Baklava and Russian Coffee.</p>
+                <p><b>Restaurant Link: </b><a href="https://www.facebook.com/Hungarian-Pastry-Shop-NYC-483854171661904/timeline/" target="_blank">The Hungarian Pastry Shop Facebook Page</a></p>
+                <p><b>Menu Link: </b><a href="#">We haven't found a link yet!</a></p>
+                <p><b>More details: </b>The Hungarian Pastry Shop is a unique find in NYC, and especially in Manhattan, because the place has a strong, authentic personality, there is an eclectic mix of university students, writers, actors, and resident New Yorkers, and there's a noticeable absence of tourists. There's limitless delicious eastern-European pastries cooked fresh daily, like strudel, torte, babke, and baklava. You'll be happy with whatever you order. Jeff has eastern European heritage, and is convinced he recognized that all the staff here was authentically eastern-European, too, but we can't be sure :) There's a delicious menu of coffee here, and we hear there's free refills on the coffee, too. With ample seating, you'll be happy if you get a pastry, coffee, and sit down with a book to relax. We're not sure about the wifi situation, but we think you can connect to the free wifi from the Pita place next door. Emily got a Hungarian Coffe that we thought was a little overly sweet, but otherwise, we don't have any complaints here. It's a hidden gem in NYC!</p>
+              </div>
+            </td>
+            <td>
+                <ul class="bxslider">
+                    <li><img src="{{ url_for('static', filename='img/TheHungarianPastryShop/1.jpg') }}"></li>
+                    <li><img src="{{ url_for('static', filename='img/TheHungarianPastryShop/2.jpg') }}"></li>
+                    <li><img src="{{ url_for('static', filename='img/TheHungarianPastryShop/3.jpg') }}"></li>
+                    <li><img src="{{ url_for('static', filename='img/TheHungarianPastryShop/4.jpg') }}"></li>
+                    <li><img src="{{ url_for('static', filename='img/TheHungarianPastryShop/5.jpg') }}"></li>
+                </ul>
+            </td>
+        </table>
+
+
+        <div id="map"></div>
+
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzn_jmwfkOfkbvKoUeSDb3YDObuY5EKC0&callback=initMap">
+    </script>
+    <!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=10606011;
+var sc_invisible=1;
+var sc_security="067aebd7";
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="website
+statistics" href="http://statcounter.com/"
+target="_blank"><img class="statcounter"
+src="http://c.statcounter.com/10606011/0/067aebd7/1/"
+alt="website statistics"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+  </body>
+</html>

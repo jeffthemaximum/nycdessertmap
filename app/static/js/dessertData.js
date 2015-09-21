@@ -109,14 +109,90 @@ var dessertData = [
               '</div>'+
               '<h1 id="firstHeading" class="firstHeading">Sweet Life Pastry</h1>'+
               '<div id="bodyContent">'+
-              '<p><b>Sweet Life Pastry</b> Located pretty far north in NYC, in the Washington Heights neighborhood. '+
+              '<p><b>Sweet Life Pastry</b> is located pretty far north in NYC, in the Washington Heights neighborhood. '+
               'This quaint, family-owned dessert spot is one of the best in the city and definitely worth the trip! '+
-              'We came here on a Sunday afternoon, and they devoured the Tres Leches Strawberry Vanilla cake. '+
+              'We came here on a Sunday afternoon, and we devoured the Tres Leches Strawberry Vanilla cake. '+
               'We came here on a recommendation from Yelp, and we\'d been excited to get some Churro\'s, but it '+
               'seemed like they were out by the time we got there. Our favorite part is the family-atmosphere here, and it looked '+
               'like multiple generations of family memebers were working here.'+
               '<p>Learn more here: <a href="/SweetLifePastry">'+
               'More detailed writeup about Sweet Life Pastry</a> '+
+              '(last visited by Jeff and Emily on September 20, 2015).</p>'+
+              '</div>'+
+              '</div>'
+    },
+    {
+      name: "MakeMyCake",
+      latLong: {lat: 40.8108449, lng: -73.9474725},
+      descr: '<div id="content">'+
+              '<div id="siteNotice">'+
+              '</div>'+
+              '<h1 id="firstHeading" class="firstHeading">Make My Cake</h1>'+
+              '<div id="bodyContent">'+
+              '<p><b>Make My Cake</b> makes some of the best cupcakes in the city, and has one of the best atmospheres of '+
+              'any dessert place in NYC. We came to this Harlem location on the middle of the day on a Sunday, '+
+              'and the place was alive with people, music, and excitement. We wanted to get like 20 cupcakes, but got just '+
+              'one Vanilla Cupcake with Lemon frosting. We\'ve eaten many cupcakes in NYC, and we place Make My Cake\'s up '+
+              'there with any of the best you\'ll get at more touristy downtown locations. '+
+              '<p>Learn more here: <a href="/MakeMyCake">'+
+              'More detailed writeup about Make My Cake</a> '+
+              '(last visited by Jeff and Emily on September 20, 2015).</p>'+
+              '</div>'+
+              '</div>'
+    },
+    {
+      name: "TheHungarianPastryShop",
+      latLong: {lat: 40.8035836, lng: -73.963425},
+      descr: '<div id="content">'+
+              '<div id="siteNotice">'+
+              '</div>'+
+              '<h1 id="firstHeading" class="firstHeading">The Hungarian Pastry Shop</h1>'+
+              '<div id="bodyContent">'+
+              '<p><b>The Hungarian Pastry Shop</b> has an enormous display of so many delicious, authentic Hungarian '+
+              'pastries, it can be difficult to know which of the many pastries to pick. No need to worry, because they are '+
+              'all great, so you\' be happy no matter what you chose. There\'s favorites like Tortes and Struddles and Babkes. '+
+              'There\'s also plenty of indoor and outdoor seating, a great location right across from Cathedral of St. John, '+
+              'and eclectic mix of non-touristy New Yorkers. Food, drink, and atmosphere are unique and unbeatable.'+
+              '<p>Learn more here: <a href="/TheHungarianPastryShop">'+
+              'More detailed writeup about The Hungarian Pastry Shop</a> '+
+              '(last visited by Jeff and Emily on September 20, 2015).</p>'+
+              '</div>'+
+              '</div>'
+    },
+    {
+      name: "Levain",
+      latLong: {lat: 40.779927, lng: -73.980341},
+      descr: '<div id="content">'+
+              '<div id="siteNotice">'+
+              '</div>'+
+              '<h1 id="firstHeading" class="firstHeading">Levain Bakery</h1>'+
+              '<div id="bodyContent">'+
+              '<p><b>Levain Bakery</b> has the best cookies in NYC, and probably in the whole world, honestly. '+
+              'Cookies cost $4-$5 here, which sound like crazy NYC prices, until you see how ginormous these cookies are. '+
+              'They\'re probably about half a pound of cookie dough, and, when baked, they have these irrestible crunchy exterior, '+
+              'and a supper gooey, almost raw interior. I don\'t even want to know how much butter is in them. There\'s devoted followers '+
+              'for each flavor they have, but we recommend the oatmeal raisin cookie.'+
+              '<p>Learn more here: <a href="/Levain">'+
+              'More detailed writeup about Levain Bakery</a> '+
+              '(last visited by Jeff and Emily on September 20, 2015).</p>'+
+              '</div>'+
+              '</div>'
+    },
+    {
+      name: "Schmackarys",
+      latLong: {lat: 40.7601265, lng: -73.9909416},
+      descr: '<div id="content">'+
+              '<div id="siteNotice">'+
+              '</div>'+
+              '<h1 id="firstHeading" class="firstHeading">Schmackary\'s Cookies</h1>'+
+              '<div id="bodyContent">'+
+              '<p><b>Schmackary\'s</b> makes a mean cookie that draws both tourists and New Yorkers alike to their midtown location. '+
+              'Their style is a flatter, crispier cookie, but the cookies still have a soft, bendable texture. They have a creative '+
+              'list of cookies on their menu, which includes a classic like chocolate chip, but also some innovative ones, like '+
+              'blueberry cobbler, funfetti, and graceland, which has some Elvis favorites like peanut butter and bacon. '+
+              'We had the red velvet, and enjoyed both the chocolately cookie and the cream cheese frosting.'+
+              '<p>Learn more here: <a href="/Schmackarys">'+
+              'More detailed writeup about Schmackary\'s</a> '+
               '(last visited by Jeff and Emily on September 20, 2015).</p>'+
               '</div>'+
               '</div>'

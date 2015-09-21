@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/x-icon">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/flatly-small-map.css') }}">
+    <!-- jQuery library (served from Google) -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <!-- bxSlider Javascript file -->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.bxslider.js') }}"></script>
+    <!-- bxSlider CSS file -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/jquery.bxslider.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/dessertData.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/map.js') }}"></script>
+  </head>
+  <body>
+
+  <div class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{{ url_for('main.index') }}">NycDessertMap</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="{{ url_for('main.index') }}">Home</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+    </div>
+  </div>
+
+
+
+        <div class="page-header">
+          <h2>Make My Cake</h2>
+        </div>
+        <table>
+            <td>
+              <div class="container" id="detailed-restaurant-description">
+                <p>Among the best cupcakes in NYC.</p>
+                <p><b>What to get: </b>Large Vanilla Cupcake with Lemon Frosting.</p>
+                <p><b>Restaurant Link: </b><a href="http://www.makemycake.com/" target="_blank">Make My Cake Website</a></p>
+                <p><b>Menu Link: </b><a href="http://www.makemycake.com/menu.cfm" target="_blank">Make My Cake Menu</a></p>
+                <p><b>More details: </b>Make My Cake has a great, energetic atmosphere, delicious cupcakes, and friendly staff who makes ya feel like a regular. Emily and I came here on a particularly eventful Sunday: <a href="http://www.africanamericandayparade.org/1.html" target="_blank">The 2015 African American Day Parade</a> was going on just outside Make My Cake, and inside Make My Cake, they were celebrating their 20th aniversary. The bakery had a live DJ there, and it seemed like a lot of extra customers had showed up because of the parade and because of the anniversary. This made it even more fun than it may be on a regular day, but the atmosphere is one of our favorite parts of our trip to Make My Cake. Even if the atmosphere was terrible (which is wasn't!), this place would still be worth the trip, because the cupcakes are just that good. We got a large vanilla cupcake with lemon frosting, and it was perfect. The cake was on the denser side in a way that was clearer purposeful. The lemon frosting was puckery and sweet. If we had one criticism, it's that the cupcake was a little light on the frosting, but we may just be critical because we love cupcakes with extra frosting. Regardless, make a trip here, and you'll definitely enjoy some cupcakes and good times!</p>
+                <p>
+              </div>
+            </td>
+            <td>
+                <ul class="bxslider">
+                    <li><img src="{{ url_for('static', filename='img/MakeMyCake/1.jpg') }}"></li>
+                    <li><img src="{{ url_for('static', filename='img/MakeMyCake/2.jpg') }}"></li>
+                    <li><img src="{{ url_for('static', filename='img/MakeMyCake/3.jpg') }}"></li>
+                    <li><img src="{{ url_for('static', filename='img/MakeMyCake/4.jpg') }}"></li>
+                    <li><img src="{{ url_for('static', filename='img/MakeMyCake/5.jpg') }}"></li>
+                </ul>
+            </td>
+        </table>
+
+
+        <div id="map"></div>
+
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzn_jmwfkOfkbvKoUeSDb3YDObuY5EKC0&callback=initMap">
+    </script>
+    <!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=10606011;
+var sc_invisible=1;
+var sc_security="067aebd7";
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="website
+statistics" href="http://statcounter.com/"
+target="_blank"><img class="statcounter"
+src="http://c.statcounter.com/10606011/0/067aebd7/1/"
+alt="website statistics"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+  </body>
+</html>

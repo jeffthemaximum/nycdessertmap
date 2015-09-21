@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/x-icon">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/flatly-small-map.css') }}">
+    <!-- jQuery library (served from Google) -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <!-- bxSlider Javascript file -->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.bxslider.js') }}"></script>
+    <!-- bxSlider CSS file -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/jquery.bxslider.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/dessertData.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/map.js') }}"></script>
+  </head>
+  <body>
+
+  <div class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{{ url_for('main.index') }}">NycDessertMap</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="{{ url_for('main.index') }}">Home</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+    </div>
+  </div>
+
+
+
+        <div class="page-header">
+          <h2>The Hungarian Pastry Shop</h2>
+        </div>
+        <table>
+            <td>
+              <div class="container" id="detailed-restaurant-description">
+                <p>Best cookies in NYC.</p>
+                <p><b>What to get: </b>Oatmeal Raisin Cookie.</p>
+                <p><b>Restaurant Link: </b><a href="http://www.levainbakery.com/" target="_blank">Levain Bakery Website</a></p>
+                <p><b>Menu Link: </b><a href="http://www.levainbakery.com/store/all-products.html">Levain Bakery Menu</a></p>
+                <p><b>More details: </b>Levain Bakery sells the best cookies in NYC, period. Their style of cookie is gigantic, thick, with a crispy outside and a gooey inside. On weekends, there's almost always a line but you'll probably get through it in about 10 minutes. The shop is in the basement of a relatively residential Upper West Side building, but Levain is pumping out fresh, warm cookies from the same basement spot that they sell them. This means you'll get a warm, fresh-baked one whenever you go. Flavors include chocolate chip walnut, double chocolate chunk, and oatmeal raisin. Each flavor has a camp of followers who think it's the best, and we tend to think the oatmeal raisin is the bestest of the best. It's buttery and gooey but still crispy and warm, and even the raisins seem just a little bitter than regular raisins, though it may be the fact that they're nessled in a warm Levain cookie that makes them seem exceptional. Regardless, go here, but not too often, or else you may anger your cariologist.</p>
+              </div>
+            </td>
+            <td>
+                <ul class="bxslider">
+                    <li><img src="{{ url_for('static', filename='img/Levain/1.jpg') }}"></li>
+                    <li><img src="{{ url_for('static', filename='img/Levain/2.jpg') }}"></li>
+                    <li><img src="{{ url_for('static', filename='img/Levain/3.jpg') }}"></li>
+                    <li><img src="{{ url_for('static', filename='img/Levain/4.jpg') }}"></li>
+                    <li><img src="{{ url_for('static', filename='img/Levain/5.jpg') }}"></li>
+                </ul>
+            </td>
+        </table>
+
+
+        <div id="map"></div>
+
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzn_jmwfkOfkbvKoUeSDb3YDObuY5EKC0&callback=initMap">
+    </script>
+    <!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=10606011;
+var sc_invisible=1;
+var sc_security="067aebd7";
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="website
+statistics" href="http://statcounter.com/"
+target="_blank"><img class="statcounter"
+src="http://c.statcounter.com/10606011/0/067aebd7/1/"
+alt="website statistics"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+  </body>
+</html>
