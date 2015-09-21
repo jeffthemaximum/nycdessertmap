@@ -58,4 +58,4 @@ def levain():
 
 @main.route('/Schmackarys')
 def schmackarys():
-    return render_template('schmackarys.html')
+    return render_template('Schmackarys.html')
