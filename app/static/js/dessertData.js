@@ -97,7 +97,27 @@ var dessertData = [
               'and Emily loves the banana dark chocolate.'+
               '<p>Learn more here: <a href="/SprinklesUES">'+
               'More detailed writeup about Sprinkles Cupcakes</a> '+
-              '(last visited by Jeff on November 15, 2014).</p>'+
+              '(last visited by Jeff and Emily on November 15, 2014).</p>'+
+              '</div>'+
+              '</div>'
+    },
+    {
+      name: "SweetLifePastry",
+      latLong: {lat: 40.8375839, lng: -73.9427477},
+      descr: '<div id="content">'+
+              '<div id="siteNotice">'+
+              '</div>'+
+              '<h1 id="firstHeading" class="firstHeading">Sweet Life Pastry</h1>'+
+              '<div id="bodyContent">'+
+              '<p><b>Sweet Life Pastry</b> Located pretty far north in NYC, in the Washington Heights neighborhood. '+
+              'This quaint, family-owned dessert spot is one of the best in the city and definitely worth the trip! '+
+              'We came here on a Sunday afternoon, and they devoured the Tres Leches Strawberry Vanilla cake. '+
+              'We came here on a recommendation from Yelp, and we\'d been excited to get some Churro\'s, but it '+
+              'seemed like they were out by the time we got there. Our favorite part is the family-atmosphere here, and it looked '+
+              'like multiple generations of family memebers were working here.'+
+              '<p>Learn more here: <a href="/SweetLifePastry">'+
+              'More detailed writeup about Sweet Life Pastry</a> '+
+              '(last visited by Jeff and Emily on September 20, 2015).</p>'+
               '</div>'+
               '</div>'
     }
